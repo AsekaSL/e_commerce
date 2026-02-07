@@ -1,8 +1,6 @@
-import React from 'react'
-
 const Promotional = () => {
   return (
-    <section className="mb-16">
+    <section className="px-20 py-20">
         <div className="relative w-full h-72 rounded-xl overflow-hidden bg-[#111418] flex items-center">
             <div className="absolute inset-0 opacity-40 bg-cover bg-center" data-alt="Abstract colorful fashion textile background" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHH4Q_IBhpXd3dqwnqshY8i01RiYGiL6GBEx4wlMxEEg6EHre5aNKKN71yWQIs-l2SAbiDYmgyO2fO-3nzjLix4EAeEeIrMLzUzE9ziCpQmn3o7QZn1lsjDhPHRFi9QKyEaucCE_J1vnGHDT8dwuRfsCwmEwK0QAAxxqKEmQs704YhhL8fHymhTdSoUI3o8-mAYYWH_VhQ_q5UafebbHRGB8yHlN1yOC2JInmkLODcE2ug7rE3yye53auyLsklj8JWdM82A4rtnEKU")'}}></div>
             <div className="relative z-10 px-12 w-full flex flex-col md:flex-row md:items-center justify-between gap-6">
