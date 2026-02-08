@@ -1,3 +1,5 @@
+import { MdLocalShipping, MdShoppingCart, MdStar, MdVerified } from "react-icons/md"
+
 const ProductHero = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -29,11 +31,11 @@ const ProductHero = () => {
                         <h1 className="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight">Pro Wireless Noise-Cancelling X1</h1>
                         <div className="flex items-center gap-2 mt-1">
                             <div className="flex text-amber-400">
-                                <span className="material-symbols-outlined fill-current text-lg">star</span>
-                                <span className="material-symbols-outlined fill-current text-lg">star</span>
-                                <span className="material-symbols-outlined fill-current text-lg">star</span>
-                                <span className="material-symbols-outlined fill-current text-lg">star</span>
-                                <span className="material-symbols-outlined text-lg">star_half</span>
+                                <MdStar className="text-lg" />
+                                <MdStar className="text-lg" />
+                                <MdStar className="text-lg" />
+                                <MdStar className="text-lg" />
+                                <MdStar className="text-lg" />
                             </div>
                             <span className="text-sm font-semibold">4.8</span>
                             <span className="text-[#617589] text-sm">(1,248 reviews)</span>
@@ -68,22 +70,22 @@ const ProductHero = () => {
                                 <button className="px-4 text-xl hover:text-[#1173d4] transition-colors">+</button>
                             </div> */}
                             <button className="flex-1 bg-[#1173d4] text-white font-bold h-12 rounded-lg hover:bg-[#1173d4]/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#1173d4]/20">
-                                <span className="material-symbols-outlined">shopping_cart</span>
-                                    Add to Cart
+                                <MdShoppingCart className="text-lg" />
+                                Add to Cart
                             </button>
                         </div>
                     </div>
                      {/* Trust Badges */}
                     <div className="mt-10 grid grid-cols-2 gap-4 border-t border-[#f0f2f4] dark:border-[#2a343e] pt-8">
                         <div className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-[#1173d4] text-2xl">local_shipping</span>
+                            <MdLocalShipping className="text-[#1173d4] text-2xl" />
                             <div>
                                 <p className="text-xs font-bold uppercase">Free Shipping</p>
                                 <p className="text-[11px] text-[#617589]">Orders over $100</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-[#1173d4] text-2xl">verified_user</span>
+                            <MdVerified className="text-[#1173d4] text-2xl" />
                             <div>
                                 <p className="text-xs font-bold uppercase">2 Year Warranty</p>
                                 <p className="text-[11px] text-[#617589]">Genuine products</p>

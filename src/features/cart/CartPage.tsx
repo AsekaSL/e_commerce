@@ -1,4 +1,4 @@
-import { MdRemove } from "react-icons/md"
+import { MdAdd, MdArrowBack, MdArrowForward, MdDelete, MdRemove, MdVerified } from "react-icons/md"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
 
@@ -35,15 +35,16 @@ const CartPage = () => {
                     <div className="flex items-center gap-6 mt-4 sm:mt-0">
                         <div className="flex items-center bg-gray-50 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 p-1">
                             <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-                                <span className="material-symbols-outlined text-sm">remove</span>
+                                <MdRemove className="text-sm" />
                             </button>
                             {/* <input className="w-10 text-center bg-transparent border-none focus:ring-0 font-bold text-sm" type="number" value="1"/> */}
                             <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-                                <span className="material-symbols-outlined text-sm">add</span>
+                                
+                                <MdAdd className="text-sm" />
                             </button>
                         </div>
                         <button className="text-gray-400 hover:text-red-500 transition-colors">
-                            <span className="material-symbols-outlined">delete</span>
+                            <MdDelete />
                         </button>
                     </div>
                 </div>
@@ -62,15 +63,15 @@ const CartPage = () => {
             <div className="flex items-center gap-6 mt-4 sm:mt-0">
             <div className="flex items-center bg-gray-50 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 p-1">
             <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-            <span className="material-symbols-outlined text-sm">remove</span>
+            <MdRemove className="text-sm" />
             </button>
             {/* <input className="w-10 text-center bg-transparent border-none focus:ring-0 font-bold text-sm" type="number" value="1"/> */}
             <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-            <span className="material-symbols-outlined text-sm">add</span>
+            <MdAdd className="text-sm" />
             </button>
             </div>
             <button className="text-gray-400 hover:text-red-500 transition-colors">
-            <span className="material-symbols-outlined">delete</span>
+            <MdDelete />
             </button>
             </div>
             </div>
@@ -87,15 +88,15 @@ const CartPage = () => {
             <div className="flex items-center gap-6 mt-4 sm:mt-0">
             <div className="flex items-center bg-gray-50 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 p-1">
             <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-            <span className="material-symbols-outlined text-sm">remove</span>
+            <MdRemove className="text-sm" />
             </button>
             {/* <input className="w-10 text-center bg-transparent border-none focus:ring-0 font-bold text-sm" type="number" value="2"/> */}
             <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-            <span className="material-symbols-outlined text-sm">add</span>
+            <MdAdd className="text-sm" />
             </button>
             </div>
             <button className="text-gray-400 hover:text-red-500 transition-colors">
-            <span className="material-symbols-outlined">delete</span>
+            <MdDelete />
             </button>
             </div>
             </div>
@@ -104,7 +105,7 @@ const CartPage = () => {
             
             <div className="pt-6">
             <button className="flex items-center gap-2 text-[#1173d4] font-semibold hover:underline">
-            <span className="material-symbols-outlined">arrow_back</span>
+                <MdArrowBack />
                                     Continue Shopping
             </button>
             </div>
@@ -112,7 +113,7 @@ const CartPage = () => {
         </div>
         
 
-        <div className="w-full lg:w-[380px]">
+        <div className="w-full lg:w-95">
         <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 sticky top-24">
         <h2 className="text-xl font-bold mb-6">Order Summary</h2>
         <div className="space-y-4 mb-6 pb-6 border-b border-gray-100 dark:border-gray-800">
@@ -142,10 +143,10 @@ const CartPage = () => {
         </div>
         <button className="w-full bg-[#1173d4] hover:bg-[#1173d4]/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-[0.98] shadow-lg shadow-[#1173d4]/20">
                                 Proceed to Checkout
-                                <span className="material-symbols-outlined">arrow_forward</span>
+                                <MdArrowForward />
         </button>
         <div className="mt-8 flex flex-wrap justify-center gap-4 grayscale opacity-50">
-        <span className="material-symbols-outlined" title="Secure Payment">verified_user</span>
+            <MdVerified className="text-4xl" title="Secure Payment" />
         <div className="h-6 w-10 bg-gray-200 dark:bg-gray-700 rounded text-[8px] flex items-center justify-center font-bold">VISA</div>
         <div className="h-6 w-10 bg-gray-200 dark:bg-gray-700 rounded text-[8px] flex items-center justify-center font-bold">MC</div>
         <div className="h-6 w-10 bg-gray-200 dark:bg-gray-700 rounded text-[8px] flex items-center justify-center font-bold">AMEX</div>

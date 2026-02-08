@@ -1,3 +1,4 @@
+import { MdCheckCircle, MdExpandMore, MdStar } from "react-icons/md"
 import Breadcrumbs from "../../components/productDetails/Breadcrumbs"
 import ProductHero from "../../components/productDetails/ProductHero"
 import Footer from "../../layouts/Footer"
@@ -17,10 +18,10 @@ const ProductDetailsPage = () => {
             <ProductHero />
 
             {/* Details & Reviews Section */}
-            {/* <div className="mt-20 border-t border-[#f0f2f4] dark:border-[#2a343e] pt-12">
+            <div className="mt-20 border-t border-[#f0f2f4] dark:border-[#2a343e] pt-12">
                 <div className="flex flex-col md:flex-row gap-12">
 
-                     <!-- Detailed Specs --> 
+                     {/* <!-- Detailed Specs -->  */}
                     <div className="md:w-1/3">
                         <h3 className="text-xl font-bold mb-6">Product Specifications</h3>
                         <ul className="space-y-4">
@@ -43,7 +44,7 @@ const ProductDetailsPage = () => {
                         </ul>
                     </div>
 
-                     <!-- Customer Reviews --> 
+                     {/* <!-- Customer Reviews -->  */}
                     <div className="md:w-2/3">
                         <div className="flex items-center justify-between mb-8">
                             <h3 className="text-xl font-bold">Customer Reviews</h3>
@@ -51,7 +52,7 @@ const ProductDetailsPage = () => {
                         </div>
                         <div className="space-y-8">
 
-                             <!-- Review Item 1 --> 
+                             {/* <!-- Review Item 1 -->  */}
                             <div className="flex flex-col gap-3 pb-8 border-b border-[#f0f2f4] dark:border-[#2a343e]">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
@@ -59,11 +60,11 @@ const ProductDetailsPage = () => {
                                         <div>
                                             <p className="text-sm font-bold">James Wilson</p>
                                             <div className="flex text-amber-400">
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +77,7 @@ const ProductDetailsPage = () => {
 
                                 <div className="flex gap-2">
                                     <div className="px-2 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 text-[10px] font-bold rounded flex items-center gap-1">
-                                        <span className="material-symbols-outlined text-[12px]">check_circle</span> VERIFIED BUYER
+                                        <MdCheckCircle className="text-[12px]" /> VERIFIED BUYER
                                     </div>
                                 </div>
                             </div>
@@ -89,11 +90,11 @@ const ProductDetailsPage = () => {
                                         <div>
                                             <p className="text-sm font-bold">Sarah Miller</p>
                                             <div className="flex text-amber-400">
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined fill-current text-xs">star</span>
-                                                <span className="material-symbols-outlined text-xs">star</span>
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
+                                                <MdStar className="text-xs" />
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +105,7 @@ const ProductDetailsPage = () => {
                                 </p>
                                 <div className="flex gap-2">
                                 <div className="px-2 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 text-[10px] font-bold rounded flex items-center gap-1">
-                                <span className="material-symbols-outlined text-[12px]">check_circle</span> VERIFIED BUYER
+                                <MdCheckCircle className="text-[12px]" /> VERIFIED BUYER
                                                                 </div>
                                 </div>
                             </div>
@@ -112,15 +113,15 @@ const ProductDetailsPage = () => {
                         </div>
                         <button className="w-full mt-8 py-3 text-sm font-bold text-[#617589] hover:text-[#1173d4] transition-colors flex items-center justify-center gap-2">
                             Load More Reviews
-                            <span className="material-symbols-outlined">expand_more</span>
+                            <MdExpandMore className="text-lg" />
                         </button>
                     </div>
 
                 </div>
-            </div> */}
+            </div>
 
             {/* <!-- Related Products Section (Small Grid) --> */}
-            {/* <div className="mt-20 mb-12">
+            <div className="mt-20 mb-12">
                 <h3 className="text-xl font-bold mb-8">You might also like</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div className="group cursor-pointer">
@@ -144,7 +145,7 @@ const ProductDetailsPage = () => {
                         <p className="text-sm text-[#1173d4] font-medium">$59.00</p>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
         </main>
         
