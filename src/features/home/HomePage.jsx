@@ -1,7 +1,7 @@
-import CategoryGrid from '../../components/CategoryGrid'
-import HeroSection from '../../components/HeroSection'
-import Promotional from '../../components/Promotional'
-import TrendingNow from '../../components/TrendingNow'
+import CategoryGrid from '../../components/home/CategoryGrid'
+import HeroSection from '../../components/home/HeroSection'
+import Promotional from '../../components/home/Promotional'
+import TrendingNow from '../../components/home/TrendingNow'
 import Footer from '../../layouts/Footer'
 import Header from '../../layouts/Header'
 
