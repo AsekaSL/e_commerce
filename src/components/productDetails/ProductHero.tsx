@@ -63,8 +63,8 @@ const ProductHero = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row gap-4">
                             {/* <div className="flex items-center border border-[#f0f2f4] dark:border-[#2a343e] rounded-lg h-12">
-                                <button className="px-4 text-xl hover:text-[#1173d4] transition-colors">-</button>
-                                <input type="text" className="w-12 text-center bg-transparent border-none focus:ring-0 font-bold" readOnly value="1" />
+                                <button className="px-4 text-xl hover:text-[#1173d4] transition-colors">−</button>
+                                <input className="w-12 text-center bg-transparent border-none focus:ring-0 font-bold" readOnly type="text" value="1"/>
                                 <button className="px-4 text-xl hover:text-[#1173d4] transition-colors">+</button>
                             </div> */}
                             <button className="flex-1 bg-[#1173d4] text-white font-bold h-12 rounded-lg hover:bg-[#1173d4]/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#1173d4]/20">

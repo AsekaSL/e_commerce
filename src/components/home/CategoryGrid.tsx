@@ -3,7 +3,7 @@ import { MdArrowForward,  MdFace3,  MdHeadphones,  MdLaptopMac, MdSports, MdWeek
 
 const CategoryGrid = () => {
 
-    const getIcon = (category) => {
+    const getIcon = (category: string) => {
         if (category === "Electronics") 
             return <MdLaptopMac className="text-3xl!" />
         else if (category === "Fashion") 
