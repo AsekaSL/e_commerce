@@ -131,7 +131,7 @@ const ProductListingPage = () => {
                                 <button className="absolute top-3 right-3 p-2 bg-white/80 dark:bg-slate-900/80 rounded-full text-slate-900 dark:text-white hover:text-red-500 backdrop-blur-sm transition-colors">
                                     <MdFavorite  />
                                 </button>
-                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
+                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-linear-to-t from-black/60 to-transparent">
                                     <button className="w-full bg-[#1173d4] text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
                                         <MdShoppingCart className="text-sm" />
                                             Add to Cart
@@ -166,7 +166,7 @@ const ProductListingPage = () => {
                                 <button className="absolute top-3 right-3 p-2 bg-white/80 dark:bg-slate-900/80 rounded-full text-slate-900 dark:text-white hover:text-red-500 backdrop-blur-sm transition-colors">
                                     <MdFavorite />
                                 </button>
-                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
+                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-linear-to-t from-black/60 to-transparent">
                                     <button className="w-full bg-[#1173d4] text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
                                         <MdShoppingCart className="text-sm" /> Add to Cart
                                     </button>
@@ -200,7 +200,7 @@ const ProductListingPage = () => {
                                 <button className="absolute top-3 right-3 p-2 bg-white/80 dark:bg-slate-900/80 rounded-full text-slate-900 dark:text-white hover:text-red-500 backdrop-blur-sm transition-colors">
                                     <MdFavorite />
                                 </button>
-                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
+                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-linear-to-t from-black/60 to-transparent">
                                     <button className="w-full bg-[#1173d4] text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
                                         <MdShoppingCart className="text-sm" /> Add to Cart
                                     </button>
@@ -239,7 +239,7 @@ const ProductListingPage = () => {
                                 <button className="absolute top-3 right-3 p-2 bg-white/80 dark:bg-slate-900/80 rounded-full text-slate-900 dark:text-white hover:text-red-500 backdrop-blur-sm transition-colors">
                                     <MdFavorite />
                                 </button>
-                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
+                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-linear-to-t from-black/60 to-transparent">
                                     <button className="w-full bg-[#1173d4] text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
                                         <MdShoppingCart className="text-sm" /> Add to Cart
                                     </button>
@@ -274,7 +274,7 @@ const ProductListingPage = () => {
                             <button className="absolute top-3 right-3 p-2 bg-white/80 dark:bg-slate-900/80 rounded-full text-slate-900 dark:text-white hover:text-red-500 backdrop-blur-sm transition-colors">
                                 <MdFavorite />
                             </button>
-                            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
+                            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-linear-to-t from-black/60 to-transparent">
                                 <button className="w-full bg-[#1173d4] text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
                                 <MdShoppingCart className="text-sm" /> Add to Cart
                                 </button>
@@ -307,7 +307,7 @@ const ProductListingPage = () => {
                                 <button className="absolute top-3 right-3 p-2 bg-white/80 dark:bg-slate-900/80 rounded-full text-slate-900 dark:text-white hover:text-red-500 backdrop-blur-sm transition-colors">
                                     <MdFavorite />
                                 </button>
-                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
+                                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-linear-to-t from-black/60 to-transparent">
                                     <button className="w-full bg-[#1173d4] text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
                                         <MdShoppingCart className="text-sm" /> Add to Cart
                                     </button>
