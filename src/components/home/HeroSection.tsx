@@ -1,3 +1,5 @@
+import Button from "../../layouts/Button"
+
 const HeroSection = () => {
   return (
     <section className="px-20 py-20">
@@ -8,8 +10,8 @@ const HeroSection = () => {
                     <h2 className="text-5xl font-bold text-white max-w-lg leading-tight mb-6">Redefine Your Modern Wardrobe</h2>
                     <p className="text-gray-200 text-lg max-w-md mb-8">Discover the latest trends in sustainable fashion and premium accessories. Limited time offers available.</p>
                     <div className="flex gap-4">
-                        <button className="bg-[#1173d4] hover:bg-[#1173d4]/90 text-white px-8 py-3 rounded-lg font-bold transition-all transform hover:scale-105">Shop Now</button>
-                        <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-3 rounded-lg font-bold transition-all">Explore Lookbook</button>
+                        <Button styleType="primary" title="Shop Now" />
+                        <Button styleType="secondary" title="Explore Lookbook" />
                     </div>
                 </div>
             </div>
