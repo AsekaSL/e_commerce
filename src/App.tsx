@@ -3,6 +3,7 @@ import HomePage from './features/home/HomePage'
 import ProductListingPage from './features/products/ProductListingPage'
 import ProductDetailsPage from './features/product_details/ProductDetailsPage'
 import CartPage from './features/cart/CartPage'
+import CheckoutPage from './features/checkout/CheckoutPage'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path="/products" element={<ProductListingPage />} />
         <Route path="/productdetails" element={<ProductDetailsPage />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/checkout' element={<CheckoutPage />} />
       </Routes>
     </body>
   )
