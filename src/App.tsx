@@ -4,6 +4,7 @@ import ProductListingPage from './features/products/ProductListingPage'
 import ProductDetailsPage from './features/product_details/ProductDetailsPage'
 import CartPage from './features/cart/CartPage'
 import CheckoutPage from './features/checkout/CheckoutPage'
+import UserProfile from './features/UserProfile/UserProfile'
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
         <Route path="/productdetails" element={<ProductDetailsPage />} />
         <Route path='/cart' element={<CartPage />} />
         <Route path='/checkout' element={<CheckoutPage />} />
+        <Route path="/account" element={<UserProfile />} />
+        <Route path="*" element={<h1 className='text-center text-3xl mt-20'>404 - Page Not Found</h1>} />
       </Routes>
     </body>
   )

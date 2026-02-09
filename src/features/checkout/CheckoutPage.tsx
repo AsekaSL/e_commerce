@@ -1,4 +1,4 @@
-import { MdAccountBalanceWallet, MdCreditCard, MdLocalShipping, MdLock, MdPublishedWithChanges, MdSupportAgent, MdVerified, MdVerifiedUser } from "react-icons/md"
+import { MdAccountBalanceWallet, MdCreditCard, MdLocalShipping, MdLock, MdPublishedWithChanges, MdSupportAgent, MdVerifiedUser } from "react-icons/md"
 import Header from "../../layouts/Header"
 import Footer from "../../layouts/Footer"
 
