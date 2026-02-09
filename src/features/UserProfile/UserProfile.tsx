@@ -1,4 +1,4 @@
-import { MdCreditCard, MdFavorite, MdLocationOn, MdPerson, MdSettings } from "react-icons/md"
+import { MdAddLocation, MdBusiness, MdCreditCard, MdFavorite, MdHome, MdLocationOn, MdLogout, MdPerson, MdSettings, MdVisibility } from "react-icons/md"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
 import { LuPackage2 } from "react-icons/lu"
@@ -49,7 +49,7 @@ const UserProfile = () => {
                     </a>
                     <hr className="my-2 border-gray-100 dark:border-gray-800"/>
                     <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#dc2626] hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors" href="#">
-                    <span className="material-symbols-outlined text-xl">logout</span>
+                        <MdLogout className="text-xl" />
                     <p className="text-sm font-medium">Logout</p>
                     </a>
                     </nav>
@@ -112,7 +112,7 @@ const UserProfile = () => {
                     </td>
                     <td className="px-6 py-4 font-bold text-[#111418] dark:text-white">$249.00</td>
                     <td className="px-6 py-4 text-right">
-                    <button className="text-[#617589] hover:text-[#1173d4]"><span className="material-symbols-outlined">visibility</span></button>
+                    <button className="text-[#617589] hover:text-[#1173d4]"><MdVisibility className="text-xl" /></button>
                     </td>
                     </tr>
                     <tr className="border-b border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
@@ -125,7 +125,7 @@ const UserProfile = () => {
                     </td>
                     <td className="px-6 py-4 font-bold text-[#111418] dark:text-white">$1,120.00</td>
                     <td className="px-6 py-4 text-right">
-                    <button className="text-[#617589] hover:text-[#1173d4]"><span className="material-symbols-outlined">visibility</span></button>
+                    <button className="text-[#617589] hover:text-[#1173d4]"><MdVisibility className="text-xl" /></button>
                     </td>
                     </tr>
                     <tr className="border-b border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
@@ -138,7 +138,7 @@ const UserProfile = () => {
                     </td>
                     <td className="px-6 py-4 font-bold text-[#111418] dark:text-white">$89.50</td>
                     <td className="px-6 py-4 text-right">
-                    <button className="text-[#617589] hover:text-[#1173d4]"><span className="material-symbols-outlined">visibility</span></button>
+                    <button className="text-[#617589] hover:text-[#1173d4]"><MdVisibility className="text-xl" /></button>
                     </td>
                     </tr>
                     </tbody>
@@ -150,7 +150,7 @@ const UserProfile = () => {
                     <div className="flex items-center justify-between px-4">
                     <h2 className="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Saved Addresses</h2>
                     <button className="flex items-center gap-2 text-[#1173d4] text-sm font-bold">
-                    <span className="material-symbols-outlined text-lg">add_location</span>
+                    <MdAddLocation className="text-lg" />
                                                         Add New
                                                     </button>
                     </div>
@@ -160,7 +160,7 @@ const UserProfile = () => {
                     <div className="absolute top-4 right-4 bg-[#1173d4] text-white text-[10px] font-bold uppercase px-2 py-1 rounded">Default</div>
                     <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 text-[#1173d4]">
-                    <span className="material-symbols-outlined">home</span>
+                    <MdHome className="text-lg" />
                     <span className="font-bold text-sm">Home</span>
                     </div>
                     <div>
@@ -180,7 +180,7 @@ const UserProfile = () => {
                     <div className="bg-white dark:bg-[#1c2631] border border-[#f0f2f4] dark:border-[#2a3038] rounded-xl p-5 shadow-sm">
                     <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 text-[#617589]">
-                    <span className="material-symbols-outlined">business</span>
+                    <MdBusiness className="text-lg" />
                     <span className="font-bold text-sm">Work</span>
                     </div>
                     <div>
