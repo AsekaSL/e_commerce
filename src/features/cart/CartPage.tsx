@@ -1,6 +1,7 @@
 import { MdAdd, MdArrowBack, MdArrowForward, MdDelete, MdRemove, MdVerified } from "react-icons/md"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
+import Button from "../../layouts/Button"
 
 const CartPage = () => {
   return (

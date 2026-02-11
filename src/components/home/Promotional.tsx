@@ -1,3 +1,5 @@
+import Button from "../../layouts/Button"
+
 const Promotional = () => {
   return (
     <section className="px-20 py-20">
@@ -23,7 +25,7 @@ const Promotional = () => {
                             <div className="text-gray-400 text-[10px] uppercase">Secs</div>
                         </div>
                     </div>
-                <button className="bg-[#1173d4] text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-[#1173d4] transition-all duration-300">Shop Sale</button>
+                    <Button styleType="primary" title="Shop Sale" />
                 </div>
             </div>
         </div>

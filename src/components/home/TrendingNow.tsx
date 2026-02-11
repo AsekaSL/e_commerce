@@ -20,7 +20,7 @@ const TrendingNow = () => {
         {
           /* Product cards will be dynamically rendered here based on trendingNowData */
           trendingNowData.map((product, index) => (
-            <div key={index} className="group bg-white dark:bg-[#101922] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div key={index} className="group bg-white border-2 border-gray-200 dark:bg-[#101922] dark:border-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
               <div className="relative aspect-4/5 bg-gray-100 dark:bg-gray-900 overflow-hidden">
                 {product.isSell && <div className="absolute top-3 left-3 z-10 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">SALE</div>}
                 {product.isFavorite && <div className="absolute top-3 right-3 z-10">

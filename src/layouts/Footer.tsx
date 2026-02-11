@@ -1,4 +1,5 @@
 import { MdCall, MdChat, MdLocationOn, MdMail, MdPublic, MdShare, MdShoppingBag } from 'react-icons/md'
+import Button from './Button'
 
 const Footer = () => {
   return (
@@ -16,11 +17,11 @@ const Footer = () => {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">The ultimate destination for premium shopping. Curating the best products for your modern lifestyle.</p>
             <div className="flex flex-col gap-3">
-            <span className="font-bold text-sm">Join our newsletter</span>
-            <div className="flex gap-2">
-            <input className="flex-1 bg-gray-100 dark:bg-gray-800 border-none rounded-lg px-4 text-sm focus:ring-[#1173d4]/20" placeholder="Email address" type="email"/>
-            <button className="bg-[#1173d4] text-white px-4 py-2 rounded-lg font-bold text-sm">Join</button>
-            </div>
+              <span className="font-bold text-sm">Join our newsletter</span>
+              <div className="flex gap-2">
+                <input className="flex-1 bg-gray-100 dark:bg-gray-800 border-none rounded-lg px-4 text-sm focus:ring-[#1173d4]/20" placeholder="Email address" type="email"/>
+                <Button styleType="primary" title="Join" />
+              </div>
             </div>
             </div>
           {/* <!-- Links --> */}
