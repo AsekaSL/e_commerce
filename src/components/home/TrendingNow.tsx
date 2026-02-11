@@ -31,7 +31,7 @@ const TrendingNow = () => {
                 
               <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt={product.title} style={{backgroundImage: `url(${product.imageUrl})`}}></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <Button styleType="add-to-cart" title="Add to Cart" icon={<MdAddShoppingCart className='text-xl!' />} />
+                <Button styleType="add-to-cart" title="Add to Cart" icon={<MdAddShoppingCart className='text-xl!'  />} iconPlace="left" />
               </div>
               </div>
               <div className="p-4 flex flex-col grow">

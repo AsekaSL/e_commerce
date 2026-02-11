@@ -1,4 +1,4 @@
-const Button = ({ styleType, title, icon }: { styleType: string, title: string, icon?: React.ReactNode }) => {
+const Button = ({ styleType, title, icon, iconPlace }: { styleType: string, title: string, icon?: React.ReactNode, iconPlace?: 'left' | 'right' }) => {
 
     const getStyle = (styleType: string) => {
         if (styleType === 'primary') {
@@ -11,7 +11,11 @@ const Button = ({ styleType, title, icon }: { styleType: string, title: string, 
     }
 
   return (
-    <div className={getStyle(styleType)}>{icon} {title}</div>
+    <div className={getStyle(styleType)}>
+      {icon && iconPlace === 'left' && <>{icon}</>}
+      {title}
+      {icon && iconPlace === 'right' && <>{icon}</>}
+    </div>
   )
 }
 
