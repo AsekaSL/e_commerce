@@ -38,3 +38,10 @@ export const trendingNowData : Product[] = [
         imageUrl: assets.insta_max_professional_camera
     }
 ];
+
+export const customerCareLinks = [
+    { title: "Help Center", href: "#" },
+    { title: "Track Your Order", href: "#" },
+    { title: "Returns & Exchanges", href: "#" },
+    { title: "Shipping Information", href: "#" }
+];

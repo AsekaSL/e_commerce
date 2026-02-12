@@ -1,5 +1,6 @@
 import { MdCall, MdChat, MdLocationOn, MdMail, MdPublic, MdShare, MdShoppingBag } from 'react-icons/md'
 import Button from './Button'
+import { customerCareLinks } from '../config/data'
 
 const Footer = () => {
   return (
@@ -26,13 +27,14 @@ const Footer = () => {
             </div>
           {/* <!-- Links --> */}
             <div>
-            <h4 className="font-bold mb-6">Customer Care</h4>
-            <ul className="flex flex-col gap-4 text-sm text-gray-500">
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">Help Center</a></li>
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">Track Your Order</a></li>
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">Returns &amp; Exchanges</a></li>
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">Shipping Information</a></li>
-            </ul>
+              <h4 className="font-bold mb-6">Customer Care</h4>
+              <ul className="flex flex-col gap-4 text-sm text-gray-500">
+                {
+                  customerCareLinks.map((link, index) => (
+                    <li key={index}><a className="hover:text-[#1173d4] transition-colors" href={link.href}>{link.title}</a></li>
+                  ))
+                }
+              </ul>
             </div>
             {/* <!-- Links --> */}
             <div>
