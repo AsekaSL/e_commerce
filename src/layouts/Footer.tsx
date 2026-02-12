@@ -1,4 +1,3 @@
-import { MdCall, MdChat, MdLocationOn, MdMail, MdPublic, MdShare, MdShoppingBag } from 'react-icons/md'
 import Button from './Button'
 import { companyLinks, contactUsLinks, customerCareLinks } from '../config/data'
 import { IconGet } from '../utils/IconGet'
@@ -13,7 +12,7 @@ const Footer = () => {
             <div className="flex flex-col gap-6">
             <div className="flex items-center gap-2">
             <div className="bg-[#1173d4] p-1.5 rounded-lg text-white">
-              <MdShoppingBag className="text-xl!" />
+              {IconGet("MdShoppingBag", "text-xl!")}
             </div>
             <span className="text-xl font-bold tracking-tight">PremiumShop</span>
             </div>
