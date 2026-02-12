@@ -1,6 +1,6 @@
 import { MdCall, MdChat, MdLocationOn, MdMail, MdPublic, MdShare, MdShoppingBag } from 'react-icons/md'
 import Button from './Button'
-import { customerCareLinks } from '../config/data'
+import { companyLinks, customerCareLinks } from '../config/data'
 
 const Footer = () => {
   return (
@@ -38,31 +38,32 @@ const Footer = () => {
             </div>
             {/* <!-- Links --> */}
             <div>
-            <h4 className="font-bold mb-6">Company</h4>
-            <ul className="flex flex-col gap-4 text-sm text-gray-500">
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">About PremiumShop</a></li>
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">Sustainability</a></li>
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">Privacy Policy</a></li>
-            <li><a className="hover:text-[#1173d4] transition-colors" href="#">Terms of Service</a></li>
-            </ul>
+              <h4 className="font-bold mb-6">Company</h4>
+              <ul className="flex flex-col gap-4 text-sm text-gray-500">
+                {
+                  companyLinks.map((link, index) => (
+                    <li key={index} ><a className="hover:text-[#1173d4] transition-colors" href= {link.href} >{link.title}</a></li>
+                  ))
+                }
+              </ul>
             </div>
             {/* <!-- Contact Info --> */}
             <div>
-            <h4 className="font-bold mb-6">Contact Us</h4>
-            <ul className="flex flex-col gap-4 text-sm text-gray-500">
-            <li className="flex items-center gap-3">
-              <MdMail className="text-lg!" />
-              support@premiumshop.com
-            </li>
-            <li className="flex items-center gap-3">
-              <MdCall className="text-lg!" />
-                +1 (555) 000-1234
-            </li>
-            <li className="flex items-center gap-3">
-              <MdLocationOn className="text-lg!" />
-              123 Commerce St, NY 10001
-            </li>
-            </ul>
+              <h4 className="font-bold mb-6">Contact Us</h4>
+              <ul className="flex flex-col gap-4 text-sm text-gray-500">
+                <li className="flex items-center gap-3">
+                  <MdMail className="text-lg!" />
+                  support@premiumshop.com
+                </li>
+                <li className="flex items-center gap-3">
+                  <MdCall className="text-lg!" />
+                    +1 (555) 000-1234
+                </li>
+                <li className="flex items-center gap-3">
+                  <MdLocationOn className="text-lg!" />
+                  123 Commerce St, NY 10001
+                </li>
+              </ul>
             </div>
           </div>
             {/* <!-- Bottom Bar --> */}

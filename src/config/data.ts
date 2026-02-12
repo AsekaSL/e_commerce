@@ -45,3 +45,10 @@ export const customerCareLinks = [
     { title: "Returns & Exchanges", href: "#" },
     { title: "Shipping Information", href: "#" }
 ];
+
+export const companyLinks = [
+    { title: "About PremiumShop", href: "#" },
+    { title: "Sustainability", href: "#" },
+    { title: "Privacy Policy", href: "#" },
+    { title: "Terms of Service", href: "#" }
+];
