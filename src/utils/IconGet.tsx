@@ -1,5 +1,5 @@
 import { IoMdShirt } from "react-icons/io";
-import { MdCall, MdChat, MdFace3, MdHeadphones, MdLaptopMac, MdLocationOn, MdMail, MdPublic, MdShare, MdShoppingBag, MdSports, MdWeekend } from "react-icons/md";
+import { MdCall, MdChat, MdFace3, MdFavorite, MdHeadphones, MdLaptopMac, MdLocationOn, MdMail, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSports, MdWeekend } from "react-icons/md";
 
 export const IconGet = (iconName: string, style: string) => {
     switch (iconName) {
@@ -29,6 +29,14 @@ export const IconGet = (iconName: string, style: string) => {
             return <MdSports className={style} />;
         case "MdShoppingBag":
             return <MdShoppingBag className={style} />;
+        case "MdSearch":
+            return <MdSearch className={style} />;
+        case "MdFavorite":
+            return <MdFavorite className={style} />;
+        case "MdPerson":
+            return <MdPerson className={style} />;
+        case "MdShoppingCart":
+            return <MdShoppingCart className={style} />;
         default:
             return null;
     }
