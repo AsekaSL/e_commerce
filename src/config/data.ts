@@ -52,3 +52,9 @@ export const companyLinks = [
     { title: "Privacy Policy", href: "#" },
     { title: "Terms of Service", href: "#" }
 ];
+
+export const contactUsLinks = [
+    { title: "support@premiumshop.com", href: "mailto:support@premiumshop.com", icon: "MdMail" },
+    { title: "+1 (555) 000-1234", href: "tel:+15550001234", icon: "MdCall" },
+    { title: "123 Commerce St, NY 10001", href: "#", icon: "MdLocationOn" }
+];

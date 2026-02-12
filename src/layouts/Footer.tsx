@@ -1,6 +1,7 @@
 import { MdCall, MdChat, MdLocationOn, MdMail, MdPublic, MdShare, MdShoppingBag } from 'react-icons/md'
 import Button from './Button'
-import { companyLinks, customerCareLinks } from '../config/data'
+import { companyLinks, contactUsLinks, customerCareLinks } from '../config/data'
+import { IconGet } from '../utils/IconGet'
 
 const Footer = () => {
   return (
@@ -51,18 +52,14 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-6">Contact Us</h4>
               <ul className="flex flex-col gap-4 text-sm text-gray-500">
-                <li className="flex items-center gap-3">
-                  <MdMail className="text-lg!" />
-                  support@premiumshop.com
-                </li>
-                <li className="flex items-center gap-3">
-                  <MdCall className="text-lg!" />
-                    +1 (555) 000-1234
-                </li>
-                <li className="flex items-center gap-3">
-                  <MdLocationOn className="text-lg!" />
-                  123 Commerce St, NY 10001
-                </li>
+                {
+                  contactUsLinks.map((link, index) => (
+                    <li className="flex items-center gap-3" key={index}>
+                      {IconGet(link.icon, "text-lg!")}
+                      {link.title}
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </div>
