@@ -67,16 +67,14 @@ const Footer = () => {
           <div className="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-gray-400">© {new Date().getFullYear()} PremiumShop. All rights reserved.</p>
             <div className="flex items-center gap-6">
-
-              <a className="text-gray-400 hover:text-[#1173d4] transition-colors" href="#">
-                <MdPublic className="text-xl!" />
-              </a>
-              <a className="text-gray-400 hover:text-[#1173d4] transition-colors" href="#">
-                <MdChat className="text-xl!" />
-              </a>
-              <a className="text-gray-400 hover:text-[#1173d4] transition-colors" href="#">
-                <MdShare className="text-xl!" />
-              </a>
+              {
+                ["MdPublic", "MdChat", "MdShare"].map((iconName, index) => (
+                  <a key={index} className="text-gray-400 hover:text-[#1173d4] transition-colors" href="#">
+                    {IconGet(iconName, "text-xl!")}
+                  </a>
+                ))
+              }
+              
             </div>
           </div>
         </div>
