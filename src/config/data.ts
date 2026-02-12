@@ -58,3 +58,12 @@ export const contactUsLinks = [
     { title: "+1 (555) 000-1234", href: "tel:+15550001234", icon: "MdCall" },
     { title: "123 Commerce St, NY 10001", href: "#", icon: "MdLocationOn" }
 ];
+
+export const categories = [
+    { name: "Electronics", icon: "MdLaptopMac" },
+    { name: "Fashion", icon: "IoMdShirt" },
+    { name: "Home", icon: "MdWeekend" },
+    { name: "Beauty", icon: "MdFace3" },
+    { name: "Sports", icon: "MdSports" },
+    { name: "Accessories", icon: "MdHeadphones" }
+]

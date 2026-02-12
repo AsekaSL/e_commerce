@@ -1,5 +1,7 @@
 import { IoMdShirt } from 'react-icons/io';
 import { MdArrowForward,  MdFace3,  MdHeadphones,  MdLaptopMac, MdSports, MdWeekend } from 'react-icons/md'
+import { IconGet } from '../../utils/IconGet';
+import { categories } from '../../config/data';
 
 const CategoryGrid = () => {
 
@@ -28,13 +30,13 @@ const CategoryGrid = () => {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {
-                ["Electronics", "Fashion", "Home", "Beauty", "Sports", "Accessories"].map((category, index) => (
+                categories.map((category, index) => (
                     <div className="group cursor-pointer" key={index}>
                         <div className="bg-white dark:bg-[#101922] border border-gray-200 dark:border-gray-800 rounded-xl p-6 flex flex-col items-center gap-3 transition-all hover:shadow-lg hover:border-[#1173d4]/50">
                             <div className="w-12 h-12 bg-[#1173d4]/10 rounded-full flex items-center justify-center text-[#1173d4] group-hover:scale-110 transition-transform">
-                                {getIcon(category)}
+                                {IconGet(category.icon, "text-3xl!")}
                             </div>
-                            <span className="font-semibold text-sm">{category}</span>
+                            <span className="font-semibold text-sm">{category.name}</span>
                         </div>
                     </div>
                 ))
