@@ -1,6 +1,8 @@
-import { MdCategory, MdChevronLeft, MdChevronRight, MdFavorite, MdKeyboardArrowDown, MdPayments, MdShoppingCart, MdSort, MdStar, MdStarHalf } from "react-icons/md"
+import { MdChevronLeft, MdChevronRight, MdFavorite, MdKeyboardArrowDown, MdPayments, MdShoppingCart, MdSort, MdStar, MdStarHalf } from "react-icons/md"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
+import { IconGet } from "../../utils/IconGet"
+import { productCategories } from "../../config/data"
 
 const ProductListingPage = () => {
   return (
@@ -11,9 +13,9 @@ const ProductListingPage = () => {
             {/* <!-- Breadcrumbs --> */}
             <nav className="flex items-center gap-2 mb-6">
                 <a className="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-[#1173d4]" href="#">Home</a>
-                <MdChevronRight className="text-slate-300 dark:text-slate-600" />
+                {IconGet("MdChevronRight", "text-slate-300 dark:text-slate-600")}
                 <a className="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-[#1173d4]" href="#">Electronics</a>
-                <MdChevronRight className="text-slate-300 dark:text-slate-600" />
+                {IconGet("MdChevronRight", "text-slate-300 dark:text-slate-600")}
                 <span className="text-slate-900 dark:text-white text-sm font-semibold">Audio &amp; Headphones</span>
             </nav>
             <div className="flex flex-col lg:flex-row gap-8">
@@ -24,26 +26,18 @@ const ProductListingPage = () => {
                     {/* <!-- Categories --> */}
                     <div>
                         <h3 className="text-slate-900 dark:text-white font-bold mb-4 flex items-center gap-2">
-                            <MdCategory className="text-[#1173d4]" />
+                            {IconGet("MdCategory", "text-[#1173d4]")}
                             Categories
                         </h3>
                         <div className="space-y-2">
-                            <label className="flex items-center gap-3 cursor-pointer group">
-                                <input checked className="rounded border-slate-300 text-[#1173d4] focus:ring-[#1173d4] h-4 w-4" type="checkbox"/>
-                                <span className="text-slate-600 dark:text-slate-400 text-sm group-hover:text-[#1173d4]">Wireless Headphones</span>
-                            </label>
-                            <label className="flex items-center gap-3 cursor-pointer group">
-                            <input className="rounded border-slate-300 text-[#1173d4] focus:ring-[#1173d4] h-4 w-4" type="checkbox"/>
-                            <span className="text-slate-600 dark:text-slate-400 text-sm group-hover:text-[#1173d4]">Earbuds</span>
-                            </label>
-                            <label className="flex items-center gap-3 cursor-pointer group">
-                            <input className="rounded border-slate-300 text-[#1173d4] focus:ring-[#1173d4] h-4 w-4" type="checkbox"/>
-                            <span className="text-slate-600 dark:text-slate-400 text-sm group-hover:text-[#1173d4]">Noise Cancelling</span>
-                            </label>
-                            <label className="flex items-center gap-3 cursor-pointer group">
-                            <input className="rounded border-slate-300 text-[#1173d4] focus:ring-[#1173d4] h-4 w-4" type="checkbox"/>
-                            <span className="text-slate-600 dark:text-slate-400 text-sm group-hover:text-[#1173d4]">Gaming Headsets</span>
-                            </label>
+                            {
+                                productCategories.map((category, index) => (
+                                    <label key={index} className="flex items-center gap-3 cursor-pointer group">
+                                        <input checked={category.isChecked} className="rounded border-slate-300 text-[#1173d4] focus:ring-[#1173d4] h-4 w-4" type="checkbox"/>
+                                        <span className="text-slate-600 dark:text-slate-400 text-sm group-hover:text-[#1173d4]">{category.name}</span>
+                                    </label>
+                                ))
+                            }
                         </div>
                     </div>
 
@@ -337,7 +331,7 @@ const ProductListingPage = () => {
                     {/* <!-- Pagination --> */}
                     <div className="mt-12 flex justify-center items-center gap-2">
                         <button className="p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800">
-                        <MdChevronLeft />
+                            {IconGet("MdChevronLeft", "")}
                         </button>
                         <button className="size-10 rounded-lg bg-[#1173d4] text-white font-bold">1</button>
                         <button className="size-10 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium">2</button>
@@ -345,7 +339,7 @@ const ProductListingPage = () => {
                         <span className="px-2 text-slate-400">...</span>
                         <button className="size-10 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium">12</button>
                         <button className="p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800">
-                            <MdChevronRight />
+                            {IconGet("MdChevronRight", "")}
                         </button>
                     </div>
 

@@ -9,3 +9,8 @@ export interface Product {
     isSell?: boolean;
     isFavorite?: boolean;
 }
+
+export interface ProductCategory {
+    name: string;
+    isChecked: boolean;
+}

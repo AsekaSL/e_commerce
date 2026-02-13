@@ -1,5 +1,5 @@
 import { assets } from "../assets/products/assets";
-import type { Product } from "./types";
+import type { Product, ProductCategory } from "./types";
 
 export const trendingNowData : Product[] = [
     {
@@ -67,3 +67,23 @@ export const categories = [
     { name: "Sports", icon: "MdSports" },
     { name: "Accessories", icon: "MdHeadphones" }
 ]
+
+// Product Listting Page
+export const productCategories : ProductCategory[] = [
+    {
+        name: "Wireless Headphones",
+        isChecked: true
+    },
+    {
+        name: "Earbuds",
+        isChecked: false
+    },
+    {
+        name: "Noise Cancelling",
+        isChecked: false
+    },
+    {
+        name: "Gaming Headsets",
+        isChecked: false
+    }
+];

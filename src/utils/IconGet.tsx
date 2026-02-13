@@ -1,5 +1,5 @@
 import { IoMdShirt } from "react-icons/io";
-import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForward, MdArrowForwardIos, MdCall, MdChat, MdFace3, MdFavorite, MdHeadphones, MdLaptopMac, MdLocationOn, MdMail, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSports, MdStar, MdWeekend } from "react-icons/md";
+import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForward, MdArrowForwardIos, MdCall, MdCategory, MdChat, MdChevronLeft, MdChevronRight, MdFace3, MdFavorite, MdHeadphones, MdLaptopMac, MdLocationOn, MdMail, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSports, MdStar, MdWeekend } from "react-icons/md";
 
 export const IconGet = (iconName: string, style: string) => {
     switch (iconName) {
@@ -47,6 +47,12 @@ export const IconGet = (iconName: string, style: string) => {
             return <MdStar className={style} />;
         case "MdAddShoppingCart":
             return <MdAddShoppingCart className={style} />;
+        case "MdCategory":
+            return <MdCategory className={style} />;
+        case "MdChevronLeft":
+            return <MdChevronLeft className={style} />;
+        case "MdChevronRight":
+            return <MdChevronRight className={style} />;
         default:
             return null;
     }
