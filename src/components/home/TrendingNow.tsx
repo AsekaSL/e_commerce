@@ -1,6 +1,6 @@
 import Button from '../../layouts/Button'
 import { products } from '../../config/data'
-import { IconGet } from '../../utils/IconGet'
+import { IconGet } from '../../utils/actions'
 
 const TrendingNow = () => {
   return (

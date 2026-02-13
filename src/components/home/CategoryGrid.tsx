@@ -1,4 +1,4 @@
-import { IconGet } from '../../utils/IconGet';
+import { IconGet } from '../../utils/actions';
 import { categories } from '../../config/data';
 
 const CategoryGrid = () => {

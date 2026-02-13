@@ -1,5 +1,5 @@
 import { IoMdShirt } from "react-icons/io";
-import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForward, MdArrowForwardIos, MdCall, MdCategory, MdChat, MdChevronLeft, MdChevronRight, MdFace3, MdFavorite, MdHeadphones, MdLaptopMac, MdLocationOn, MdMail, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSports, MdStar, MdWeekend } from "react-icons/md";
+import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForward, MdArrowForwardIos, MdCall, MdCategory, MdChat, MdChevronLeft, MdChevronRight, MdFace3, MdFavorite, MdHeadphones, MdLaptopMac, MdLocationOn, MdMail, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSports, MdStar, MdStarBorder, MdStarHalf, MdWeekend } from "react-icons/md";
 
 export const IconGet = (iconName: string, style: string) => {
     switch (iconName) {
@@ -56,4 +56,22 @@ export const IconGet = (iconName: string, style: string) => {
         default:
             return null;
     }
+}
+
+export const getRatingStars = (rating: number) => {
+
+    return (<>
+        {
+            [...Array(Math.floor(rating))].map((_, index) => (
+                <MdStar key={index} className="fill-1 text-xs" />
+            ))
+        }
+        {
+            (rating % 1) >= 0.5 && <MdStarHalf className="fill-1 text-xs" />
+        }
+        {
+            (rating % 1) < 0.5 && (rating % 1) > 0 && <MdStarBorder className="fill-1 text-xs" />
+        }
+    </>);
+    
 }

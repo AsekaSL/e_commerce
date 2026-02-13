@@ -1,6 +1,6 @@
 import Button from './Button'
 import { companyLinks, contactUsLinks, customerCareLinks } from '../config/data'
-import { IconGet } from '../utils/IconGet'
+import { IconGet } from '../utils/actions'
 
 const Footer = () => {
   return (

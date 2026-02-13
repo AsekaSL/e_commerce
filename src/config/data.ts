@@ -90,7 +90,7 @@ export const products : Product[] = [
         description: "7.1 Surround sound and noise-gate mic.",
         category: "Headphones",
         price: 155.00,
-        rating: 4.5,
+        rating: 4.1,
         reviews: 67,
         imageUrl: assets.apex_pro_gamer,
         alt: "Apex Pro Gamer"
