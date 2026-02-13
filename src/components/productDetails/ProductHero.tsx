@@ -1,4 +1,5 @@
-import { MdLocalShipping, MdShoppingCart, MdStar, MdVerified } from "react-icons/md"
+import { MdStar} from "react-icons/md"
+import { IconGet } from "../../utils/actions"
 
 const ProductHero = () => {
   return (
@@ -31,11 +32,9 @@ const ProductHero = () => {
                         <h1 className="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight">Pro Wireless Noise-Cancelling X1</h1>
                         <div className="flex items-center gap-2 mt-1">
                             <div className="flex text-amber-400">
-                                <MdStar className="text-lg" />
-                                <MdStar className="text-lg" />
-                                <MdStar className="text-lg" />
-                                <MdStar className="text-lg" />
-                                <MdStar className="text-lg" />
+                                {[...Array(5)].map((_, index) => (
+                                    <MdStar className="text-lg" key={index} />
+                                ))}
                             </div>
                             <span className="text-sm font-semibold">4.8</span>
                             <span className="text-[#617589] text-sm">(1,248 reviews)</span>
@@ -64,13 +63,8 @@ const ProductHero = () => {
                             </div>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            {/* <div className="flex items-center border border-[#f0f2f4] dark:border-[#2a343e] rounded-lg h-12">
-                                <button className="px-4 text-xl hover:text-[#1173d4] transition-colors">−</button>
-                                <input className="w-12 text-center bg-transparent border-none focus:ring-0 font-bold" readOnly type="text" value="1"/>
-                                <button className="px-4 text-xl hover:text-[#1173d4] transition-colors">+</button>
-                            </div> */}
                             <button className="flex-1 bg-[#1173d4] text-white font-bold h-12 rounded-lg hover:bg-[#1173d4]/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#1173d4]/20">
-                                <MdShoppingCart className="text-lg" />
+                                {IconGet("MdShoppingCart", "text-lg")}
                                 Add to Cart
                             </button>
                         </div>
@@ -78,14 +72,16 @@ const ProductHero = () => {
                      {/* Trust Badges */}
                     <div className="mt-10 grid grid-cols-2 gap-4 border-t border-[#f0f2f4] dark:border-[#2a343e] pt-8">
                         <div className="flex items-center gap-3">
-                            <MdLocalShipping className="text-[#1173d4] text-2xl" />
+                            {
+                                IconGet("MdLocalShipping", "text-[#1173d4] text-2xl")
+                            }
                             <div>
                                 <p className="text-xs font-bold uppercase">Free Shipping</p>
                                 <p className="text-[11px] text-[#617589]">Orders over $100</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
-                            <MdVerified className="text-[#1173d4] text-2xl" />
+                            {IconGet("MdVerified", "text-[#1173d4] text-2xl")}
                             <div>
                                 <p className="text-xs font-bold uppercase">2 Year Warranty</p>
                                 <p className="text-[11px] text-[#617589]">Genuine products</p>
