@@ -1,6 +1,6 @@
-import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForwardIos, MdFavorite, MdStar } from 'react-icons/md'
 import Button from '../../layouts/Button'
 import { trendingNowData } from '../../config/data'
+import { IconGet } from '../../utils/IconGet'
 
 const TrendingNow = () => {
   return (
@@ -9,10 +9,10 @@ const TrendingNow = () => {
         <h3 className="text-2xl font-bold">Trending Now</h3>
         <div className="flex gap-2">
         <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800 transition-colors">
-          <MdArrowBackIosNew className='text-sm!' />
+          {IconGet("MdArrowBackIosNew", "text-sm!")}
         </button>
         <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800 transition-colors">
-          <MdArrowForwardIos className='text-sm!' />
+          {IconGet("MdArrowForwardIos", "text-sm!")}
         </button>
         </div>
       </div>
@@ -25,13 +25,13 @@ const TrendingNow = () => {
                 {product.isSell && <div className="absolute top-3 left-3 z-10 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">SALE</div>}
                 {product.isFavorite && <div className="absolute top-3 right-3 z-10">
                   <button className="w-8 h-8 bg-white/80 dark:bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-700 dark:text-gray-200 hover:text-red-500 transition-colors">
-                    <MdFavorite className='text-xl!' />
+                    {IconGet("MdFavorite", "text-xl!")}
                   </button>
                 </div>}
                 
               <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt={product.title} style={{backgroundImage: `url(${product.imageUrl})`}}></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <Button styleType="add-to-cart" title="Add to Cart" icon={<MdAddShoppingCart className='text-xl!'  />} iconPlace="left" />
+                <Button styleType="add-to-cart" title="Add to Cart" icon={IconGet("MdAddShoppingCart", "text-xl!")} iconPlace="left" />
               </div>
               </div>
               <div className="p-4 flex flex-col grow">
@@ -43,7 +43,7 @@ const TrendingNow = () => {
                     {product.originalPrice && <span className="text-gray-400 line-through text-xs">${product.originalPrice.toFixed(2)}</span>}
                   </div>
                   <div className="flex items-center text-yellow-400">
-                    <MdStar className='text-sm! fill-1' />
+                    {IconGet("MdStar", "text-sm! fill-1")}
                     <span className="text-gray-600 dark:text-gray-400 text-xs font-semibold ml-1">{product.rating} ({product.reviews})</span>
                   </div>
                 </div>
