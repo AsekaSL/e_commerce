@@ -1,4 +1,3 @@
-import { MdChevronLeft, MdChevronRight, MdFavorite, MdKeyboardArrowDown, MdPayments, MdShoppingCart, MdSort, MdStar, MdStarHalf } from "react-icons/md"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
 import { getRatingStars, IconGet } from "../../utils/actions"
@@ -46,7 +45,7 @@ const ProductListingPage = () => {
                     {/* <!-- Price Range Slider --> */}
                     <div>
                         <h3 className="text-slate-900 dark:text-white font-bold mb-4 flex items-center gap-2">
-                            <MdPayments className="text-[#1173d4]" />
+                            {IconGet("MdPayments", "text-[#1173d4]")}
                             Price Range
                         </h3>
                         <div className="px-2 pt-6">
@@ -65,27 +64,27 @@ const ProductListingPage = () => {
                     {/* <!-- Ratings --> */}
                     <div>
                         <h3 className="text-slate-900 dark:text-white font-bold mb-4 flex items-center gap-2">
-                            <MdStar />
+                            {IconGet("MdStar", "")}
                         Customer Rating
                         </h3>
                         <div className="space-y-2">
                             <button className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-[#1173d4] w-full text-left">
                             <div className="flex text-yellow-400">
-                                <MdStar />
-                                <MdStar />
-                                <MdStar />
-                                <MdStar />
-                                <MdStar />
+                                {
+                                    [...Array(5)].map(() => (
+                                        IconGet("MdStar", "")
+                                    ))
+                                }
                             </div>
                             <span>&amp; Up</span>
                             </button>
                             <button className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-[#1173d4] w-full text-left">
                             <div className="flex text-yellow-400">
-                                <MdStar />
-                                <MdStar />
-                                <MdStar />
-                                <MdStar />
-                                <MdStar />
+                                {
+                                    [...Array(5)].map(() => (
+                                        IconGet("MdStar", "")
+                                    ))
+                                }
                             </div>
                             <span>&amp; Up</span>
                             </button>
@@ -109,9 +108,9 @@ const ProductListingPage = () => {
                         </div>
                         <div className="flex items-center gap-4">
                             <div className="flex items-center gap-2 bg-slate-50 dark:bg-slate-900 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 cursor-pointer">
-                                <MdSort className="text-slate-400" />
+                                {IconGet("MdSort", "text-slate-400")}
                                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Sort by: Price High-Low</span>
-                                <MdKeyboardArrowDown className="text-slate-400" />
+                                {IconGet("MdKeyboardArrowDown", "text-slate-400")}
                             </div>
                         </div>
                     </div>
@@ -126,11 +125,12 @@ const ProductListingPage = () => {
                                     <div className="relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-900">
                                         <img alt={product.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt={product.description} src={product.imageUrl}/>
                                         <button className="absolute top-3 right-3 p-2 bg-white/80 dark:bg-slate-900/80 rounded-full text-slate-900 dark:text-white hover:text-red-500 backdrop-blur-sm transition-colors">
-                                            <MdFavorite  />
+                                            {IconGet("MdFavorite", "")}
+                                            
                                         </button>
                                         <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-linear-to-t from-black/60 to-transparent">
                                             <button className="w-full bg-[#1173d4] text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
-                                                <MdShoppingCart className="text-sm" />
+                                                {IconGet("MdShoppingCart", "text-sm")}
                                                     Add to Cart
                                             </button>
                                         </div>

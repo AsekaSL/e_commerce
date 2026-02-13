@@ -1,5 +1,5 @@
 import { IoMdShirt } from "react-icons/io";
-import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForward, MdArrowForwardIos, MdCall, MdCategory, MdChat, MdChevronLeft, MdChevronRight, MdFace3, MdFavorite, MdHeadphones, MdLaptopMac, MdLocationOn, MdMail, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSports, MdStar, MdStarBorder, MdStarHalf, MdWeekend } from "react-icons/md";
+import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForward, MdArrowForwardIos, MdCall, MdCategory, MdChat, MdChevronLeft, MdChevronRight, MdFace3, MdFavorite, MdHeadphones, MdKeyboardArrowDown, MdLaptopMac, MdLocationOn, MdMail, MdPayments, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSort, MdSports, MdStar, MdStarBorder, MdStarHalf, MdWeekend } from "react-icons/md";
 
 export const IconGet = (iconName: string, style: string) => {
     switch (iconName) {
@@ -53,6 +53,12 @@ export const IconGet = (iconName: string, style: string) => {
             return <MdChevronLeft className={style} />;
         case "MdChevronRight":
             return <MdChevronRight className={style} />;
+        case "MdKeyboardArrowDown":
+            return <MdKeyboardArrowDown className={style} />;
+        case "MdPayments":
+            return <MdPayments className={style} />;
+        case "MdSort":
+            return <MdSort className={style} />;
         default:
             return null;
     }
