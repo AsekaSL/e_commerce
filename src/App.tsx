@@ -20,6 +20,14 @@ const pageLoader = () => (
   </div>
 )
 
+/**
+ * Root application component that provides the global layout and client-side route tree.
+ *
+ * Renders the application's top-level layout (background, fonts, and global styles) and configures routes for
+ * home, products, product details, cart, checkout, account, and a 404 fallback.
+ *
+ * @returns The root JSX element that renders the application's layout and route configuration
+ */
 function App() {
 
   return (
