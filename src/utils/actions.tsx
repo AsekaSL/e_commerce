@@ -1,87 +1,93 @@
+import { memo } from 'react';
 import { IoMdShirt } from "react-icons/io";
 import { MdAddShoppingCart, MdArrowBackIosNew, MdArrowForward, MdArrowForwardIos, MdCall, MdCategory, MdChat, MdChevronLeft, MdChevronRight, MdFace3, MdFavorite, MdHeadphones, MdKeyboardArrowDown, MdLaptopMac, MdLocalShipping, MdLocationOn, MdMail, MdPayments, MdPerson, MdPublic, MdSearch, MdShare, MdShoppingBag, MdShoppingCart, MdSort, MdSports, MdStar, MdStarBorder, MdStarHalf, MdVerified, MdWeekend } from "react-icons/md";
 
-export const IconGet = (iconName: string, style: string) => {
+// Memoized icon component to prevent unnecessary re-renders
+const Icon = memo<{ iconName: string; className: string }>(({ iconName, className }) => {
     switch (iconName) {
         case "MdMail":
-            return <MdMail className={style} />;
+            return <MdMail className={className} />;
         case "MdCall":
-            return <MdCall className={style} />;
+            return <MdCall className={className} />;
         case "MdLocationOn":
-            return <MdLocationOn className={style} />;
+            return <MdLocationOn className={className} />;
         case "MdPublic":
-            return <MdPublic className={style} />;
+            return <MdPublic className={className} />;
         case "MdChat":
-            return <MdChat className={style} />;
+            return <MdChat className={className} />;
         case "MdShare":
-            return <MdShare className={style} />;
+            return <MdShare className={className} />;
         case "MdLaptopMac":
-            return <MdLaptopMac className={style} />;
+            return <MdLaptopMac className={className} />;
         case "IoMdShirt":
-            return <IoMdShirt className={style} />;
+            return <IoMdShirt className={className} />;
         case "MdWeekend":
-            return <MdWeekend className={style} />;
+            return <MdWeekend className={className} />;
         case "MdFace3":
-            return <MdFace3 className={style} />;
+            return <MdFace3 className={className} />;
         case "MdHeadphones":
-            return <MdHeadphones className={style} />;
+            return <MdHeadphones className={className} />;
         case "MdSports":
-            return <MdSports className={style} />;
+            return <MdSports className={className} />;
         case "MdShoppingBag":
-            return <MdShoppingBag className={style} />;
+            return <MdShoppingBag className={className} />;
         case "MdSearch":
-            return <MdSearch className={style} />;
+            return <MdSearch className={className} />;
         case "MdFavorite":
-            return <MdFavorite className={style} />;
+            return <MdFavorite className={className} />;
         case "MdPerson":
-            return <MdPerson className={style} />;
+            return <MdPerson className={className} />;
         case "MdShoppingCart":
-            return <MdShoppingCart className={style} />;
+            return <MdShoppingCart className={className} />;
         case "MdArrowForward":
-            return <MdArrowForward className={style} />;
+            return <MdArrowForward className={className} />;
         case "MdArrowBackIosNew":
-            return <MdArrowBackIosNew className={style} />;
+            return <MdArrowBackIosNew className={className} />;
         case "MdArrowForwardIos":
-            return <MdArrowForwardIos className={style} />;
+            return <MdArrowForwardIos className={className} />;
         case "MdStar":
-            return <MdStar className={style} />;
+            return <MdStar className={className} />;
         case "MdAddShoppingCart":
-            return <MdAddShoppingCart className={style} />;
+            return <MdAddShoppingCart className={className} />;
         case "MdCategory":
-            return <MdCategory className={style} />;
+            return <MdCategory className={className} />;
         case "MdChevronLeft":
-            return <MdChevronLeft className={style} />;
+            return <MdChevronLeft className={className} />;
         case "MdChevronRight":
-            return <MdChevronRight className={style} />;
+            return <MdChevronRight className={className} />;
         case "MdKeyboardArrowDown":
-            return <MdKeyboardArrowDown className={style} />;
+            return <MdKeyboardArrowDown className={className} />;
         case "MdPayments":
-            return <MdPayments className={style} />;
+            return <MdPayments className={className} />;
         case "MdSort":
-            return <MdSort className={style} />;
+            return <MdSort className={className} />;
         case "MdLocalShipping":
-            return <MdLocalShipping className={style} />;
+            return <MdLocalShipping className={className} />;
         case "MdVerified":
-            return <MdVerified className={style} />;
+            return <MdVerified className={className} />;
         default:
             return null;
     }
+});
+
+Icon.displayName = 'Icon';
+
+// IconGet function now returns memoized icons
+export const IconGet = (iconName: string, style: string) => {
+    return <Icon iconName={iconName} className={style} />;
 }
 
-export const getRatingStars = (rating: number) => {
-
-    return (<>
-        {
-            [...Array(Math.floor(rating))].map((_, index) => (
+// Memoized rating stars component for better performance
+export const getRatingStars = memo<{ rating: number }>(({ rating }) => {
+    return (
+        <>
+            {[...Array(Math.floor(rating))].map((_, index) => (
                 <MdStar key={index} className="fill-1 text-xs" />
-            ))
-        }
-        {
-            (rating % 1) >= 0.5 && <MdStarHalf className="fill-1 text-xs" />
-        }
-        {
-            (rating % 1) < 0.5 && (rating % 1) > 0 && <MdStarBorder className="fill-1 text-xs" />
-        }
-    </>);
-    
-}
+            ))}
+            {(rating % 1) >= 0.5 && <MdStarHalf className="fill-1 text-xs" />}
+            {(rating % 1) < 0.5 && (rating % 1) > 0 && <MdStarBorder className="fill-1 text-xs" />}
+        </>
+    );
+});
+
+getRatingStars.displayName = 'RatingStars';

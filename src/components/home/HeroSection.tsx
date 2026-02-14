@@ -1,6 +1,16 @@
-import Button from "../../layouts/Button"
+import { memo, useCallback } from 'react';
+import Button from "../../layouts/Button";
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
+  // Memoize button handlers
+  const handleShopNow = useCallback(() => {
+    console.log('Navigate to shop');
+  }, []);
+
+  const handleExploreLookbook = useCallback(() => {
+    console.log('Navigate to lookbook');
+  }, []);
+
   return (
     <section className="px-20 py-20">
         <div className="relative w-full h-120 rounded-xl overflow-hidden shadow-xl">
@@ -10,12 +20,16 @@ const HeroSection = () => {
                     <h2 className="text-5xl font-bold text-white max-w-lg leading-tight mb-6">Redefine Your Modern Wardrobe</h2>
                     <p className="text-gray-200 text-lg max-w-md mb-8">Discover the latest trends in sustainable fashion and premium accessories. Limited time offers available.</p>
                     <div className="flex gap-4">
-                        <Button styleType="primary" title="Shop Now" />
-                        <Button styleType="secondary" title="Explore Lookbook" />
+                        <div onClick={handleShopNow}>
+                          <Button styleType="primary" title="Shop Now" />
+                        </div>
+                        <div onClick={handleExploreLookbook}>
+                          <Button styleType="secondary" title="Explore Lookbook" />
+                        </div>
                     </div>
                 </div>
             </div>
-        {/* <!-- Carousel Nav --> */}
+        {/* Carousel Nav */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                 <div className="w-8 h-1 bg-[#1173d4] rounded-full"></div>
                 <div className="w-2 h-1 bg-white/50 rounded-full"></div>
@@ -23,7 +37,9 @@ const HeroSection = () => {
             </div>
         </div>
     </section>
-  )
-}
+  );
+});
 
-export default HeroSection
+HeroSection.displayName = 'HeroSection';
+
+export default HeroSection;

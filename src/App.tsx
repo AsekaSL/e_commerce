@@ -1,24 +1,38 @@
+import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router'
-import HomePage from './features/home/HomePage'
-import ProductListingPage from './features/products/ProductListingPage'
-import ProductDetailsPage from './features/product_details/ProductDetailsPage'
-import CartPage from './features/cart/CartPage'
-import CheckoutPage from './features/checkout/CheckoutPage'
-import UserProfile from './features/UserProfile/UserProfile'
+
+// Lazy load all route components for code splitting
+const HomePage = lazy(() => import('./features/home/HomePage'))
+const ProductListingPage = lazy(() => import('./features/products/ProductListingPage'))
+const ProductDetailsPage = lazy(() => import('./features/product_details/ProductDetailsPage'))
+const CartPage = lazy(() => import('./features/cart/CartPage'))
+const CheckoutPage = lazy(() => import('./features/checkout/CheckoutPage'))
+const UserProfile = lazy(() => import('./features/UserProfile/UserProfile'))
+
+// Loading component for better UX during code splitting
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-[#101922]">
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-16 h-16 border-4 border-[#1173d4] border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-gray-400 text-sm">Loading...</p>
+    </div>
+  </div>
+)
 
 function App() {
-
   return (
-    <body  className="bg-[#101922] font-display text-gray-100 antialiased transition-colors duration-300">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<ProductListingPage />} />
-        <Route path="/productdetails" element={<ProductDetailsPage />} />
-        <Route path='/cart' element={<CartPage />} />
-        <Route path='/checkout' element={<CheckoutPage />} />
-        <Route path="/account" element={<UserProfile />} />
-        <Route path="*" element={<h1 className='text-center text-3xl mt-20'>404 - Page Not Found</h1>} />
-      </Routes>
+    <body className="bg-[#101922] font-display text-gray-100 antialiased transition-colors duration-300">
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductListingPage />} />
+          <Route path="/productdetails" element={<ProductDetailsPage />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/checkout' element={<CheckoutPage />} />
+          <Route path="/account" element={<UserProfile />} />
+          <Route path="*" element={<h1 className='text-center text-3xl mt-20'>404 - Page Not Found</h1>} />
+        </Routes>
+      </Suspense>
     </body>
   )
 }
