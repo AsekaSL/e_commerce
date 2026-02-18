@@ -145,3 +145,24 @@ export const productCategories : ProductCategory[] = [
         isChecked: false
     }
 ];
+
+export const cartProducts = [
+    {
+        title: "Premium Wireless Headphones",
+        slug: "Midnight Black | One Size",
+        price: 299.00,
+        imageLink: assets.premium_wireless_headphones
+    },
+    {
+        title: "Minimalist Leather Watch",
+        slug: "Tan Leather | 40mm",
+        price: 150.00,
+        imageLink: assets.minimalist_ceramic_watch
+    },
+    {
+        title: "Smart Bluetooth Speaker",
+        slug: "Space Gray | Portable",
+        price: 120.00,
+        imageLink: assets.insta_max_professional_camera
+    }
+]

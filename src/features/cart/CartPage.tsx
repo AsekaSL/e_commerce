@@ -1,6 +1,7 @@
 import { MdAdd, MdArrowBack, MdArrowForward, MdDelete, MdRemove, MdVerified } from "react-icons/md"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
+import { cartProducts } from "../../config/data"
 
 const CartPage = () => {
   return (
@@ -23,32 +24,34 @@ const CartPage = () => {
             
 
                 <div className="flex-1 space-y-4">
-                    
-                    <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center gap-6">
-                        <div className="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-lg bg-cover bg-center shrink-0" data-alt="Professional wireless over-ear headphones in black" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVW4mQSRZ6mpN00-nkGwr3IxpqhXJzMqbeWGRaz_FSc86eYedst7_m-IMNiOcjh3lzlr5HUvz1Kqb0444jGp4W4UP_wHnLV8yOlAleE9ymbBiDd-cvn0hQCXejg42543DCXInbz7WDy1yK8hc0KBTMU-ezpxkV9qEroy-soO_gNG71yf6H52sKbvrWwjVCBJEXrIW3m18e01v6EHNzT0Gk8QBtlsWkwSK9GKTIiUBj5K_4e9qfGBjo7MNR2TQXFYguSTGpPjP2Jk24")' }}></div>
-                        <div className="flex-1 flex flex-col sm:flex-row justify-between w-full">
-                            <div className="space-y-1">
-                                <h3 className="text-lg font-bold">Premium Wireless Headphones</h3>
-                                <p className="text-sm text-gray-500">Midnight Black | One Size</p>
-                                <p className="text-[#1173d4] font-bold text-lg mt-2">$299.00</p>
-                            </div>
-                            <div className="flex items-center gap-6 mt-4 sm:mt-0">
-                                <div className="flex items-center bg-gray-50 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 p-1">
-                                    <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-                                        <MdRemove className="text-sm" />
-                                    </button>
-                                    {/* <input className="w-10 text-center bg-transparent border-none focus:ring-0 font-bold text-sm" type="number" value="1"/> */}
-                                    <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
-                                        <MdAdd className="text-sm" />
-                                    </button>
+                    {
+                        cartProducts.map((product, index) => (
+                            <div key={index} className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center gap-6">
+                                <div className="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-lg bg-cover bg-center shrink-0" data-alt={product.title} style={{ backgroundImage: `url("${product.imageLink}")` }}></div>
+                                <div className="flex-1 flex flex-col sm:flex-row justify-between w-full">
+                                    <div className="space-y-1">
+                                        <h3 className="text-lg font-bold">{product.title}</h3>
+                                        <p className="text-sm text-gray-500">{product.slug}</p>
+                                        <p className="text-[#1173d4] font-bold text-lg mt-2">${product.price.toFixed(2)}</p>
+                                    </div>
+                                    <div className="flex items-center gap-6 mt-4 sm:mt-0">
+                                        <div className="flex items-center bg-gray-50 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 p-1">
+                                            <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
+                                                <MdRemove className="text-sm" />
+                                            </button>
+                                            {/* <input className="w-10 text-center bg-transparent border-none focus:ring-0 font-bold text-sm" type="number" value="1"/> */}
+                                            <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
+                                                <MdAdd className="text-sm" />
+                                            </button>
+                                        </div>
+                                        <button className="text-gray-400 hover:text-red-500 transition-colors">
+                                            <MdDelete />
+                                        </button>
+                                    </div>
                                 </div>
-                                <button className="text-gray-400 hover:text-red-500 transition-colors">
-                                    <MdDelete />
-                                </button>
                             </div>
-                        </div>
-                    </div>
-
+                        ))
+                    }
                     
                 
                     <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center gap-6">

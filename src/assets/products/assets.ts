@@ -8,6 +8,8 @@ import airpulse_buds from './airpulse_buds.png'
 import nordic_pure from './nordic_pure.png'
 import vintage_echo from './vintage_echo.png'
 import apex_pro_gamer from './apex_pro_gamer.png'
+import premium_wireless_headphones from './premium_wireless_headphones.png'
+import smart_bluetooth_speaker from './smart_bluetooth_speaker.png'
 
 export const assets = {
     noice_cancelling_headphones,
@@ -19,5 +21,7 @@ export const assets = {
     airpulse_buds,
     nordic_pure,
     vintage_echo,
-    apex_pro_gamer
+    apex_pro_gamer,
+    premium_wireless_headphones,
+    smart_bluetooth_speaker
 }
