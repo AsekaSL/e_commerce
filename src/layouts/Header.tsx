@@ -1,9 +1,12 @@
+import { memo } from 'react'
 import { IconGet } from '../utils/actions'
 
-const Header = () => {
+const Header = memo(() => {
+
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#101922]/90 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
+
             {/* <!-- Logo --> */}
             <div className="flex items-center gap-2 shrink-0">
                 <div className="bg-[#1173d4] p-1.5 rounded-lg text-white">
@@ -11,6 +14,7 @@ const Header = () => {
                 </div>
             <h1 className="text-xl font-extrabold tracking-tight dark:text-white">PremiumShop</h1>
             </div>
+
             {/* <!-- Search Bar --> */}
             <div className="flex-1 max-w-xl">
                 <div className="relative group">
@@ -19,10 +23,11 @@ const Header = () => {
                             /* Search Icon */
                             IconGet("MdSearch", "text-xl!")
                         }
+                    </div>
+                    <input className="w-full h-10 bg-gray-100 dark:bg-gray-800 border-none rounded-lg pl-10 pr-4 focus:ring-2 focus:ring-[#1173d4]/20 text-sm placeholder:text-gray-500" placeholder="Search for products, brands and more..." type="text"/>
                 </div>
-                <input className="w-full h-10 bg-gray-100 dark:bg-gray-800 border-none rounded-lg pl-10 pr-4 focus:ring-2 focus:ring-[#1173d4]/20 text-sm placeholder:text-gray-500" placeholder="Search for products, brands and more..." type="text"/>
             </div>
-            </div>
+
             {/* Nav Icons & Links */}
             <div className="flex items-center gap-6">
                 <nav className="hidden lg:flex items-center gap-6">
@@ -42,9 +47,9 @@ const Header = () => {
                     </button>
                 </div>
                 </div>
-            </div>
+        </div>
     </header>
   )
-}
+})
 
 export default Header
