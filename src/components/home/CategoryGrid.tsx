@@ -1,7 +1,8 @@
 import { IconGet } from '../../utils/actions';
 import { categories } from '../../config/data';
+import { memo } from 'react';
 
-const CategoryGrid = () => {
+const CategoryGrid = memo(() => {
 
   return (
     <section className="px-20 py-20">
@@ -27,6 +28,6 @@ const CategoryGrid = () => {
         </div>
     </section>
   )
-}
+})
 
 export default CategoryGrid

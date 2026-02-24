@@ -1,6 +1,7 @@
+import { memo } from "react"
 import Button from "../../layouts/Button"
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
   return (
     <section className="px-20 py-20">
         <div className="relative w-full h-120 rounded-xl overflow-hidden shadow-xl">
@@ -24,6 +25,6 @@ const HeroSection = () => {
         </div>
     </section>
   )
-}
+})
 
 export default HeroSection

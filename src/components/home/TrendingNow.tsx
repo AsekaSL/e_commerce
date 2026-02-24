@@ -1,26 +1,14 @@
 import Button from '../../layouts/Button'
 import { products } from '../../config/data'
 import { IconGet } from '../../utils/actions'
+import type { Product } from '../../config/types'
+import { memo } from 'react'
 
-const TrendingNow = () => {
+
+const ProductCard = memo<{product: Product}>(({product}) => {
   return (
-    <section className="px-20 py-20">
-      <div className="flex items-center justify-between mb-8">
-        <h3 className="text-2xl font-bold">Trending Now</h3>
-        <div className="flex gap-2">
-        <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800 transition-colors">
-          {IconGet("MdArrowBackIosNew", "text-sm!")}
-        </button>
-        <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800 transition-colors">
-          {IconGet("MdArrowForwardIos", "text-sm!")}
-        </button>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {
-          /* Product cards will be dynamically rendered here based on trendingNowData */
-          products.slice(0, 4).map((product, index) => (
-            <div key={index} className="group bg-white border-2 border-gray-200 dark:bg-[#101922] dark:border-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+    (
+  <div  className="group bg-white border-2 border-gray-200 dark:bg-[#101922] dark:border-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
               <div className="relative aspect-4/5 bg-gray-100 dark:bg-gray-900 overflow-hidden">
                 {product.isSell && <div className="absolute top-3 left-3 z-10 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">SALE</div>}
                 {product.isFavorite && <div className="absolute top-3 right-3 z-10">
@@ -49,11 +37,34 @@ const TrendingNow = () => {
                 </div>
               </div>
             </div>
+)
+  )
+})
+
+const TrendingNow = memo(() => {
+  return (
+    <section className="px-20 py-20">
+      <div className="flex items-center justify-between mb-8">
+        <h3 className="text-2xl font-bold">Trending Now</h3>
+        <div className="flex gap-2">
+        <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800 transition-colors">
+          {IconGet("MdArrowBackIosNew", "text-sm!")}
+        </button>
+        <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800 transition-colors">
+          {IconGet("MdArrowForwardIos", "text-sm!")}
+        </button>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          /* Product cards will be dynamically rendered here based on trendingNowData */
+          products.slice(0, 4).map((product : Product, index : number) => (
+            <ProductCard key={index} product={product} />
           ))
         }
       </div>
     </section>
   )
-}
+})
 
 export default TrendingNow
