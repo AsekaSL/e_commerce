@@ -1,8 +1,12 @@
 import Button from './Button'
 import { companyLinks, contactUsLinks, customerCareLinks } from '../config/data'
 import { IconGet } from '../utils/actions'
+import { memo, useMemo } from 'react'
 
-const Footer = () => {
+const Footer = memo(() => {
+  
+  const currentYear = useMemo(() => new Date().getFullYear(), []);
+
   return (
     <footer className="bg-white dark:bg-[#101922] border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 transition-colors">
         <div className="max-w-7xl mx-auto px-6">
@@ -64,7 +68,7 @@ const Footer = () => {
           </div>
             {/* <!-- Bottom Bar --> */}
           <div className="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-400">© {new Date().getFullYear()} PremiumShop. All rights reserved.</p>
+            <p className="text-xs text-gray-400">© {currentYear} PremiumShop. All rights reserved.</p>
             <div className="flex items-center gap-6">
               {
                 ["MdPublic", "MdChat", "MdShare"].map((iconName, index) => (
@@ -79,6 +83,6 @@ const Footer = () => {
         </div>
     </footer>
   )
-}
+})
 
 export default Footer

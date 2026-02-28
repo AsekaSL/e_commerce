@@ -1,6 +1,7 @@
+import { memo } from "react"
 import Button from "../../layouts/Button"
 
-const Promotional = () => {
+const Promotional = memo(() => {
   return (
     <section className="px-20 py-20">
         <div className="relative w-full h-72 rounded-xl overflow-hidden bg-[#111418] flex items-center">
@@ -31,6 +32,6 @@ const Promotional = () => {
         </div>
     </section>
   )
-}
+})
 
 export default Promotional
