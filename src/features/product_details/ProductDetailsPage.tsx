@@ -3,8 +3,9 @@ import Breadcrumbs from "../../components/productDetails/Breadcrumbs"
 import ProductHero from "../../components/productDetails/ProductHero"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
+import { memo } from "react"
 
-const ProductDetailsPage = () => {
+const ProductDetailsPage = memo(() => {
   return (
 
     <div className="bg-[#f6f7f8] dark:bg-[#101922] font-display text-[#111418] dark:text-white transition-colors duration-200">
@@ -152,6 +153,6 @@ const ProductDetailsPage = () => {
         <Footer />
     </div>
   )
-}
+})
 
 export default ProductDetailsPage
